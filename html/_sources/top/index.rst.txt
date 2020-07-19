@@ -6,6 +6,11 @@ top
    :maxdepth: 2
    :caption: Contents:
 
+   others/others.rst
+   raspberry_pi/raspberry_pi.rst
+   bashrcに加えた変更をまとめる記事.md
+   python3.6.2のインストール.md
+   pythonスクリプトメモ.md
    sphinx_on_centos6.md
    sphinx環境立ち上げ_win10.md
    sublime_text_3_初期設定.md

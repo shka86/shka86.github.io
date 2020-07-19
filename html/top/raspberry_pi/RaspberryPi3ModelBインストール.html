@@ -1,0 +1,470 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ja" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ja" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <title>RaspberryPi3ModelBインストール &mdash; shkamemo 0.1 ドキュメント</title>
+  
+
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/my_theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="ラズパイで照度測定" href="ラズパイで照度測定.html" />
+    <link rel="prev" title="raspberry pi zero WH 立ち上げ" href="raspberry pi zero WH 立ち上げ.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> shkamemo
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../others/others.html">others</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="raspberry_pi.html">raspberry_pi</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="raspberry pi zero WH 立ち上げ.html">raspberry pi zero WH 立ち上げ</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">RaspberryPi3ModelBインストール</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#sd">SDカード準備</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id1">インストール</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">その他設定</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fcitx-mozc">日本語環境 fcitx-mozcをインストール</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#samba">samba</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#windowsssh">windowsからssh接続する環境</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#raspberry-pi">Raspberry Piの起動を確認できるように小細工</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ラズパイで照度測定.html">ラズパイで照度測定</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../bashrcに加えた変更をまとめる記事.html">プロンプトの変更</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bashrcに加えた変更をまとめる記事.html#alias">alias</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python3.6.2のインストール.html">python3.6.2のインストール</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pythonスクリプトメモ.html">pythonスクリプトメモ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sphinx_on_centos6.html">sphinx on centos6</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sphinx環境立ち上げ_win10.html">sphinx環境立ち上げ記録＠win10</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sublime_text_3_初期設定.html">sublime text 3 初期設定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ubuntuにdocker導入.html">ubuntuにdocker導入</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../win10初期設定したいこと.html">win10初期設定記録</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Windows10上でUbuntuを使いたい.html">Windows10上でUbuntuを使いたい</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">shkamemo</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="raspberry_pi.html">raspberry_pi</a> &raquo;</li>
+        
+      <li>RaspberryPi3ModelBインストール</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/top/raspberry_pi/RaspberryPi3ModelBインストール.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="raspberrypi3modelb">
+<h1>RaspberryPi3ModelBインストール<a class="headerlink" href="#raspberrypi3modelb" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>Raspberry Pi 3 Model B のインストールから初期設定までの作業メモです。</p>
+<div class="section" id="sd">
+<h2>SDカード準備<a class="headerlink" href="#sd" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li><p>SD Formatter 4.0でフォーマットする。（クイックで構わない）</p></li>
+<li><p>NOOBSを展開してSDに入れる</p>
+<ul>
+<li><p>「NOOBS_v_2_4_0」フォルダではなく、その中身をSD直下に置く。</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="id1">
+<h2>インストール<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li><p>SDカードを本体にセットして電源を接続する。</p></li>
+<li><p>言語は日本語に(何でもいいけど)</p></li>
+<li><p>Raspbian with PIXELにチェック。</p></li>
+<li><p>左上、インストールをクリックしてしばらく待つ。</p></li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h2>その他設定<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>正確にはインストールではないですが、流れでやっておきたいことなので、ここに書いておきます。</p>
+<ul class="simple">
+<li><p>Raspberry Piの設定</p>
+<ul>
+<li><p>ロケール：多分そのままでいい</p>
+<ul>
+<li><p>言語：ja (japanese)</p></li>
+<li><p>国：JP (Japan)</p></li>
+<li><p>文字セット：UTF-8</p></li>
+</ul>
+</li>
+<li><p>タイムゾーン：お好みで</p></li>
+<li><p>キーボード：</p>
+<ul>
+<li><p>Country：日本</p></li>
+<li><p>Variant：日本語</p></li>
+</ul>
+</li>
+<li><p>無線LANの国設定</p>
+<ul>
+<li><p>国：JP Japan</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>wifi設定</p>
+<ul>
+<li><p>右上にwifi設定アイコンをクリックして任意のアクセスポイントを選択・パスワードを入力する</p></li>
+</ul>
+</li>
+<li><p>rootパスワード変更</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>sudo passwd root
+//変えなくても良いみたい
+//初期状態（sudo kate /etc/shadowで&quot;*&quot;となっている場合）はログイン不可
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>piのパスワード変更</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">passwd</span> <span class="n">pi</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="fcitx-mozc">
+<h2>日本語環境 fcitx-mozcをインストール<a class="headerlink" href="#fcitx-mozc" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li><p>とりあえずアップデート</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>fcitxをインストール</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">fcitx</span><span class="o">-</span><span class="n">mozc</span> <span class="o">-</span><span class="n">y</span>
+<span class="o">//</span><span class="n">yで後の</span><span class="p">[</span><span class="n">Y</span><span class="o">/</span><span class="n">n</span><span class="p">]</span><span class="n">確認を先にしておく</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>入力メソッドを設定</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">im</span><span class="o">-</span><span class="n">config</span> <span class="o">-</span><span class="n">n</span> <span class="n">fcitx</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>再起動</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">reboot</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>通りの操作が済んだら、右上に「キーボード」または「あ」のアイコンが追加されているはず。</p></li>
+</ul>
+</div>
+<div class="section" id="samba">
+<h2>samba<a class="headerlink" href="#samba" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li><p>インストール</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>//インストールして、
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install samba
+//確認！
+smbd -V
+Version 4.1.17-Debian
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>設定を追記します。</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">vim</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">samba</span><span class="o">/</span><span class="n">smb</span><span class="o">.</span><span class="n">conf</span>
+<span class="o">//</span><span class="n">末尾に追記</span>
+<span class="p">[</span><span class="n">pi</span><span class="p">]</span>
+<span class="n">comment</span> <span class="o">=</span> <span class="n">Raspberry</span> <span class="n">Pi</span>
+<span class="n">path</span> <span class="o">=</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">pi</span>
+<span class="n">guest</span> <span class="n">ok</span> <span class="o">=</span> <span class="n">yes</span>
+<span class="n">read</span> <span class="n">only</span> <span class="o">=</span> <span class="n">no</span>
+<span class="n">public</span> <span class="o">=</span> <span class="n">yes</span>
+<span class="n">browsable</span> <span class="o">=</span> <span class="n">yes</span>
+<span class="n">force</span> <span class="n">user</span> <span class="o">=</span> <span class="n">pi</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>sambaを再起動します。</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo service smbd restart
+$ sudo service nmbd restart
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Windowsからアクセスします。
+エクスプローラのアドレスバーに
+ラズパイのIPを入力すると見えます。</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">//</span><span class="n">こんな感じ</span>
+\\<span class="n">xxx</span><span class="o">.</span><span class="n">xxx</span><span class="o">.</span><span class="n">xxx</span><span class="o">.</span><span class="n">xxx</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="windowsssh">
+<h2>windowsからssh接続する環境<a class="headerlink" href="#windowsssh" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li><p>Windows側の準備</p>
+<ul>
+<li><p>Tera Termのインストール
+[https://osdn.net/projects/ttssh2/:title]</p></li>
+<li><p>X-mingのインストール
+X window forwardingで窓を飛ばすのに使用</p></li>
+<li><p>~~(Option)~~ atom + remote-FTP
+~~ドキュメントをwindows側から編集できるけど、使い勝手がイマイチ悪い。。。atomだけで完結できないか模索中~~
+とりあえずremote-FTPの設定は下記のようにすればつながる。
+なぜかdefaultの.ftpconfigを編集して接続を試みてもうまくいかなかった。いらなさそうなものを削って繋がったのが下記。</p></li>
+</ul>
+</li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;protocol&quot;</span><span class="p">:</span> <span class="s2">&quot;sftp&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;host&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;IP Address&gt;&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="n">デフォルトは22</span><span class="p">(</span><span class="n">ダブルコーテーション不要</span><span class="p">),</span>
+    <span class="s2">&quot;user&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;User Name&gt;&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;pass&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;Password&gt;&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;remote&quot;</span><span class="p">:</span> <span class="s2">&quot;/&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;connTimeout&quot;</span><span class="p">:</span> <span class="mi">10000</span><span class="p">,</span>
+    <span class="s2">&quot;pasvTimeout&quot;</span><span class="p">:</span> <span class="mi">10000</span><span class="p">,</span>
+    <span class="s2">&quot;keepalive&quot;</span><span class="p">:</span> <span class="mi">10000</span><span class="p">,</span>
+    <span class="s2">&quot;watch&quot;</span><span class="p">:</span> <span class="p">[],</span>
+    <span class="s2">&quot;watchTimeout&quot;</span><span class="p">:</span> <span class="mi">500</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>ラズパイ側の準備</p>
+<ul>
+<li><p>sshオプション設定</p>
+<ul>
+<li><p>sudo raspi-config</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="mi">5</span> <span class="n">Interfacing</span> <span class="n">Options</span> <span class="o">&gt;</span> <span class="n">P2</span> <span class="n">SSH</span> <span class="o">&gt;</span> <span class="n">YES</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>固定IPを設定する
+/etc/dhcpcd.conf を変更する</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">interface</span> <span class="n">wlan0</span>
+<span class="n">static</span> <span class="n">ip_address</span><span class="o">=</span><span class="mf">192.168</span><span class="o">.</span><span class="n">N</span><span class="o">.</span><span class="n">M</span><span class="o">/</span><span class="n">L</span>
+<span class="n">static</span> <span class="n">routers</span><span class="o">=</span><span class="mf">192.168</span><span class="o">.</span><span class="n">N</span><span class="o">.</span><span class="mi">1</span>
+<span class="n">static</span> <span class="n">domain_name_servers</span><span class="o">=</span><span class="mf">192.168</span><span class="o">.</span><span class="n">N</span><span class="o">.</span><span class="mi">1</span>
+<span class="o">//</span><span class="n">なんでこうするかはよく知らない</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>X11-appsのインストール
+接続テストにxeyesを使いたいため</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">X11</span><span class="o">-</span><span class="n">apps</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>疎通確認</p>
+<ul>
+<li><p>X-mingでXserverを起動しておく</p></li>
+<li><p>Tera Termで新しい接続を開始
+→プロンプトが表示されたらssh接続は成功</p></li>
+<li><p>xeyesで目玉が飛んできたらwindow forwardingまで成功</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="raspberry-pi">
+<h2>Raspberry Piの起動を確認できるように小細工<a class="headerlink" href="#raspberry-pi" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li><p>/boot/config.txt に追記</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dtparam</span><span class="o">=</span><span class="n">act_led_trigger</span><span class="o">=</span><span class="n">heartbeat</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>reboot すると、起動中は緑LEDが鼓動する</p></li>
+</ul>
+<p>以上おわり。</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="ラズパイで照度測定.html" class="btn btn-neutral float-right" title="ラズパイで照度測定" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="raspberry pi zero WH 立ち上げ.html" class="btn btn-neutral float-left" title="raspberry pi zero WH 立ち上げ" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, shka
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

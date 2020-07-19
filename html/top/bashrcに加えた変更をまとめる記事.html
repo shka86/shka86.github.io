@@ -11,7 +11,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 
-  <title>sublime text 3 初期設定 &mdash; shkamemo 0.1 ドキュメント</title>
+  <title>プロンプトの変更 &mdash; shkamemo 0.1 ドキュメント</title>
   
 
 
@@ -40,8 +40,8 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="検索" href="../search.html" />
-    <link rel="next" title="ubuntuにdocker導入" href="ubuntuにdocker導入.html" />
-    <link rel="prev" title="sphinx環境立ち上げ記録＠win10" href="sphinx環境立ち上げ_win10.html" /> 
+    <link rel="next" title="python3.6.2のインストール" href="python3.6.2のインストール.html" />
+    <link rel="prev" title="&lt;no title&gt;" href="raspberry_pi/ラズパイにインストールしたツールをまとめる記事.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -93,19 +93,13 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="others/others.html">others</a></li>
 <li class="toctree-l1"><a class="reference internal" href="raspberry_pi/raspberry_pi.html">raspberry_pi</a></li>
-<li class="toctree-l1"><a class="reference internal" href="bashrcに加えた変更をまとめる記事.html">プロンプトの変更</a></li>
-<li class="toctree-l1"><a class="reference internal" href="bashrcに加えた変更をまとめる記事.html#alias">alias</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">プロンプトの変更</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#alias">alias</a></li>
 <li class="toctree-l1"><a class="reference internal" href="python3.6.2のインストール.html">python3.6.2のインストール</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pythonスクリプトメモ.html">pythonスクリプトメモ</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sphinx_on_centos6.html">sphinx on centos6</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sphinx環境立ち上げ_win10.html">sphinx環境立ち上げ記録＠win10</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">sublime text 3 初期設定</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#package-conntrol">package conntrol</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#install-packages">install packages</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#settings">settings</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#memo">memo</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="sublime_text_3_初期設定.html">sublime text 3 初期設定</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ubuntuにdocker導入.html">ubuntuにdocker導入</a></li>
 <li class="toctree-l1"><a class="reference internal" href="win10初期設定したいこと.html">win10初期設定記録</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Windows10上でUbuntuを使いたい.html">Windows10上でUbuntuを使いたい</a></li>
@@ -154,13 +148,13 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>sublime text 3 初期設定</li>
+      <li>プロンプトの変更</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/top/sublime_text_3_初期設定.md.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/top/bashrcに加えた変更をまとめる記事.md.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -173,54 +167,21 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="sublime-text-3">
-<h1>sublime text 3 初期設定<a class="headerlink" href="#sublime-text-3" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<div class="section" id="package-conntrol">
-<h2>package conntrol<a class="headerlink" href="#package-conntrol" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>2020/01/03現在、ctrl+pでinstall可能になっている</p>
-</div>
-<div class="section" id="install-packages">
-<h2>install packages<a class="headerlink" href="#install-packages" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<ul class="simple">
-<li><p>AutoPEP8</p></li>
-<li><p>monokai Extended</p></li>
-<li><p>autodocstring</p></li>
-</ul>
-</div>
-<div class="section" id="settings">
-<h2>settings<a class="headerlink" href="#settings" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-    <span class="nt">&quot;color_scheme&quot;</span><span class="p">:</span> <span class="s2">&quot;Packages/Monokai Extended/Monokai Extended.tmTheme&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;draw_white_space&quot;</span><span class="p">:</span> <span class="s2">&quot;all&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;font_size&quot;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
-    <span class="nt">&quot;ignored_packages&quot;</span><span class="p">:</span>
-    <span class="p">[</span>
-        <span class="s2">&quot;Vintage&quot;</span>
-    <span class="p">],</span>
-    <span class="nt">&quot;show_encoding&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="nt">&quot;show_line_endings&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="nt">&quot;theme&quot;</span><span class="p">:</span> <span class="s2">&quot;Adaptive.sublime-theme&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;translate_tabs_to_spaces&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="nt">&quot;word_wrap&quot;</span><span class="p">:</span> <span class="kc">false</span>
-<span class="p">}</span>
+  <p>またイチから作り直し。。。という状況になっても困らないために。
+随時追加する。</p>
+<div class="section" id="id1">
+<h1>プロンプトの変更<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">PS1</span><span class="o">=</span><span class="s2">&quot;\[\e[1;32m\] [\u@\h: \w]</span>$<span class="s2"> \[\e[00m\]&quot;</span>
 </pre></div>
 </div>
+<p>.bashrcの最後に加える。本当は別ファイルを用意してsourceしたかったのですが、コマンドを打つと行頭から入力されてプロンプトを上書きするようになってしまうようなのでそのようにする。</p>
 </div>
-<div class="section" id="memo">
-<h2>memo<a class="headerlink" href="#memo" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>後で対応するリスト</p>
-<ul class="simple">
-<li><p>shift+enterで空白二つつけて改行（markdown対応）</p></li>
-<li><p>origami</p></li>
-<li><p>空白文字を表示するとか、tabを表示するとか</p></li>
-<li><p>tabをスペースに変換するショートカット</p></li>
-<li><p>snippet</p>
-<ul>
-<li><p>code<code class="docutils literal notranslate"><span class="pre">\n</span></code></p></li>
-</ul>
-</li>
-</ul>
+<div class="section" id="alias">
+<h1>alias<a class="headerlink" href="#alias" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">alias</span> <span class="nv">ll</span><span class="o">=</span><span class="s1">&#39;ls -ltr&#39;</span>
+</pre></div>
 </div>
+<p>'='の前後にスペースがあるとエラーとなる。PEP8とは違う。</p>
 </div>
 
 
@@ -231,10 +192,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="ubuntuにdocker導入.html" class="btn btn-neutral float-right" title="ubuntuにdocker導入" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="python3.6.2のインストール.html" class="btn btn-neutral float-right" title="python3.6.2のインストール" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="sphinx環境立ち上げ_win10.html" class="btn btn-neutral float-left" title="sphinx環境立ち上げ記録＠win10" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="raspberry_pi/ラズパイにインストールしたツールをまとめる記事.html" class="btn btn-neutral float-left" title="&lt;no title&gt;" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

@@ -1,0 +1,259 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ja" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ja" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <title>ラズパイで照度測定 &mdash; shkamemo 0.1 ドキュメント</title>
+  
+
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/my_theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="検索" href="../../search.html" />
+    <link rel="next" title="&lt;no title&gt;" href="ラズパイにインストールしたツールをまとめる記事.html" />
+    <link rel="prev" title="RaspberryPi3ModelBインストール" href="RaspberryPi3ModelBインストール.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> shkamemo
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../others/others.html">others</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="raspberry_pi.html">raspberry_pi</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="raspberry pi zero WH 立ち上げ.html">raspberry pi zero WH 立ち上げ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RaspberryPi3ModelBインストール.html">RaspberryPi3ModelBインストール</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">ラズパイで照度測定</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">材料</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">ついでに回路図作成ソフトのインストール</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#spi">ラズパイのSPIを有効化する</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../bashrcに加えた変更をまとめる記事.html">プロンプトの変更</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bashrcに加えた変更をまとめる記事.html#alias">alias</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python3.6.2のインストール.html">python3.6.2のインストール</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../pythonスクリプトメモ.html">pythonスクリプトメモ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sphinx_on_centos6.html">sphinx on centos6</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sphinx環境立ち上げ_win10.html">sphinx環境立ち上げ記録＠win10</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sublime_text_3_初期設定.html">sublime text 3 初期設定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ubuntuにdocker導入.html">ubuntuにdocker導入</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../win10初期設定したいこと.html">win10初期設定記録</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Windows10上でUbuntuを使いたい.html">Windows10上でUbuntuを使いたい</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">shkamemo</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="raspberry_pi.html">raspberry_pi</a> &raquo;</li>
+        
+      <li>ラズパイで照度測定</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/top/raspberry_pi/ラズパイで照度測定.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>ラズパイで照度測定<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="section" id="id2">
+<h2>材料<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li><p>ADC：MCP3002</p></li>
+<li><p>フォトトランジスタ：NJL7502L</p></li>
+<li><p>周辺光ライトセンサ：GA1A2S 100SS</p></li>
+</ul>
+</div>
+<div class="section" id="id3">
+<h2>ついでに回路図作成ソフトのインストール<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">install</span> <span class="pre">fritzing</span></code>
+ではうまく行かない。</p>
+<p>公式サイトからダウンロードする
+<code class="docutils literal notranslate"><span class="pre">http://fritzing.org/download/?donation=0</span></code></p>
+<p>展開する
+<code class="docutils literal notranslate"><span class="pre">tar</span> <span class="pre">xvf</span> <span class="pre">fritzing-0.9.3b.linux.AMD64.tar.bz2</span></code></p>
+<p>フォルダに入って実行
+<code class="docutils literal notranslate"><span class="pre">./Fritzing</span></code></p>
+<p>入れたけどめんどくさくて使ってない笑</p>
+</div>
+<div class="section" id="spi">
+<h2>ラズパイのSPIを有効化する<a class="headerlink" href="#spi" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">raspi-config</span></code></p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="ラズパイにインストールしたツールをまとめる記事.html" class="btn btn-neutral float-right" title="&lt;no title&gt;" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="RaspberryPi3ModelBインストール.html" class="btn btn-neutral float-left" title="RaspberryPi3ModelBインストール" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, shka
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
