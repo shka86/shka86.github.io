@@ -1,0 +1,259 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ja" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ja" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <title>Windows10上でUbuntuを使いたい &mdash; shkamemo 0.1 ドキュメント</title>
+  
+
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/my_theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="検索" href="../search.html" />
+    <link rel="prev" title="win10初期設定記録" href="win10初期設定したいこと.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> shkamemo
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="sphinx_on_centos6.html">sphinx on centos6</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sphinx環境立ち上げ_win10.html">sphinx環境立ち上げ記録＠win10</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sublime_text_3_初期設定.html">sublime text 3 初期設定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ubuntuにdocker導入.html">ubuntuにdocker導入</a></li>
+<li class="toctree-l1"><a class="reference internal" href="win10初期設定したいこと.html">win10初期設定記録</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Windows10上でUbuntuを使いたい</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">shkamemo</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Windows10上でUbuntuを使いたい</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/top/Windows10上でUbuntuを使いたい.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="windows10ubuntu">
+<h1>Windows10上でUbuntuを使いたい<a class="headerlink" href="#windows10ubuntu" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p>使うといっても、自作のプログラムの動作確認に使う目的で。
+単体でubuntuマシンを立ち上げられるならそれが一番いいと思う。</p>
+<p>ちなみにこの方法だとGUIは起動しません。</p>
+<ol>
+<li><p>WSLを有効にする</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> コンパネ &gt; プログラム &gt; Windowsの機能の有効化または無効化 &gt; 「Windows Subsystem for Linux」 にチェック
+</pre></div>
+</div>
+</li>
+<li><p>Windowsを再起動</p></li>
+<li><p>Microsoft Store から Ubuntu をインストール</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="n">好きなバージョンを選べばよい</span>
+</pre></div>
+</div>
+</li>
+<li><p>起動 ～ 初期設定</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> 「起動」を押して少し待った後、 username と password を設定する
+
+ 最初ソフトウェアの更新を済ませる。
+ sudo apt update &amp;&amp; sudo apt upgrade
+ 途中で何度か返答を求められるので適宜入力する。
+</pre></div>
+</div>
+</li>
+<li><p>日本語設定</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">language</span><span class="o">-</span><span class="n">pack</span><span class="o">-</span><span class="n">ja</span> <span class="o">&amp;&amp;</span> <span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">manpages</span><span class="o">-</span><span class="n">ja</span>
+</pre></div>
+</div>
+</li>
+<li><p>rootになれるようにする</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="n">ルートのパスワードを設定すればいい</span>
+ <span class="n">sudo</span> <span class="n">passwd</span> <span class="n">root</span>
+</pre></div>
+</div>
+</li>
+<li><p>ついでにpython3までいれる</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> python3.7以上を入れると多分 lib_release 関連で躓く
+ その時は /usr/bin/lsb_release のシバンを 3.6 に指定してやると解消する。
+ これでいいのかは知らん。
+</pre></div>
+</div>
+</li>
+</ol>
+<p>と、ここまでやってubuntuを動かしてみた結果、純粋なlinuxとは挙動が異なる部分が出てきたので、投げた。
+つぎはVMwareかな。</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="win10初期設定したいこと.html" class="btn btn-neutral float-left" title="win10初期設定記録" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, shka
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

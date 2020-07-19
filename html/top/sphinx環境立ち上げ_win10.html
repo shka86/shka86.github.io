@@ -1,0 +1,346 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ja" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ja" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+  <title>sphinx環境立ち上げ記録＠win10 &mdash; shkamemo 0.1 ドキュメント</title>
+  
+
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/my_theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="検索" href="../search.html" />
+    <link rel="next" title="sublime text 3 初期設定" href="sublime_text_3_初期設定.html" />
+    <link rel="prev" title="sphinx on centos6" href="sphinx_on_centos6.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> shkamemo
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="sphinx_on_centos6.html">sphinx on centos6</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">sphinx環境立ち上げ記録＠win10</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">環境をそろえる</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">プロジェクトを立ち上げる</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">見た目を整える</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">ありがたいページ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#memo">memo</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sublime_text_3_初期設定.html">sublime text 3 初期設定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ubuntuにdocker導入.html">ubuntuにdocker導入</a></li>
+<li class="toctree-l1"><a class="reference internal" href="win10初期設定したいこと.html">win10初期設定記録</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Windows10上でUbuntuを使いたい.html">Windows10上でUbuntuを使いたい</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">shkamemo</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>sphinx環境立ち上げ記録＠win10</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/top/sphinx環境立ち上げ_win10.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="sphinx-win10">
+<h1>sphinx環境立ち上げ記録＠win10<a class="headerlink" href="#sphinx-win10" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="section" id="id1">
+<h2>環境をそろえる<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ol class="simple">
+<li><p>install python3.8.1
+<a class="reference external" href="https://www.python.org/">https://www.python.org</a></p></li>
+<li><p>install sphinx</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">sphinx</span>
+</pre></div>
+</div>
+<ol class="simple">
+<li><p>support markdown</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">commonmark</span> <span class="n">recommonmark</span> <span class="n">sphinx</span><span class="o">-</span><span class="n">markdown</span><span class="o">-</span><span class="n">tables</span>
+</pre></div>
+</div>
+<ol class="simple">
+<li><p>get theme</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">sphinx_rtd_theme</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>プロジェクトを立ち上げる<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ol class="simple">
+<li><p>generate project</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">sphinx_work</span>
+<span class="n">cd</span> <span class="n">sphinx_work</span>
+<span class="n">sphinx</span><span class="o">-</span><span class="n">quickstart</span> <span class="o">-</span><span class="n">q</span> <span class="o">-</span><span class="n">p</span> <span class="s2">&quot;test_prj&quot;</span> <span class="o">-</span><span class="n">a</span> <span class="n">author_name</span> <span class="o">-</span><span class="n">v</span> <span class="mf">1.0</span> <span class="o">-</span><span class="n">l</span> <span class="n">ja</span> <span class="n">prj_dir</span> <span class="o">--</span><span class="n">sep</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>githubにupすることを念頭に置いて
+<code class="docutils literal notranslate"><span class="pre">--ext-githubpages</span></code>をつけておくと、.nojekyllファイルを作ってくれるという</p></li>
+</ul>
+<p><a class="reference external" href="https://www.sphinx-doc.org/ja/master/man/sphinx-quickstart.html">https://www.sphinx-doc.org/ja/master/man/sphinx-quickstart.html</a></p>
+</div>
+<div class="section" id="id3">
+<h2>見た目を整える<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ol class="simple">
+<li><p>source/conf.pyの編集<br />※conf.pyはsourceとbuildを分けなかった場合は、プロジェクトdirの直下に置かれる。</p></li>
+</ol>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="c1"># -- Path setup --------------------------------------------------------------</span>
+<span class="c1"># enable to use markdown</span>
+<span class="kn">from</span> <span class="nn">recommonmark.parser</span> <span class="kn">import</span> <span class="n">CommonMarkParser</span>
+
+<span class="c1"># enable reST extension on markdown source</span>
+<span class="kn">from</span> <span class="nn">recommonmark.transform</span> <span class="kn">import</span> <span class="n">AutoStructify</span>
+
+<span class="c1"># enable rtd theme</span>
+<span class="kn">import</span> <span class="nn">sphinx_rtd_theme</span>
+
+<span class="c1"># -- Project information -----------------------------------------------------</span>
+<span class="n">project</span> <span class="o">=</span> <span class="s1">&#39;test_prj&#39;</span>
+<span class="n">copyright</span> <span class="o">=</span> <span class="s1">&#39;2020, author_name&#39;</span>
+<span class="n">author</span> <span class="o">=</span> <span class="s1">&#39;author_name&#39;</span>
+<span class="n">version</span> <span class="o">=</span> <span class="s1">&#39;1.0&#39;</span>
+<span class="n">release</span> <span class="o">=</span> <span class="s1">&#39;1.0&#39;</span>
+
+<span class="c1"># -- General configuration ---------------------------------------------------</span>
+<span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;sphinx_markdown_tables&#39;</span><span class="p">,</span>
+<span class="p">]</span>
+
+<span class="n">templates_path</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;_templates&#39;</span><span class="p">]</span>
+
+<span class="n">language</span> <span class="o">=</span> <span class="s1">&#39;ja&#39;</span>
+
+<span class="n">exclude_patterns</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="n">source_suffix</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;.rst&#39;</span><span class="p">,</span> <span class="s1">&#39;.md&#39;</span><span class="p">]</span>
+<span class="n">source_parsers</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;.md&#39;</span><span class="p">:</span> <span class="n">CommonMarkParser</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="c1"># -- Options for HTML output -------------------------------------------------</span>
+<span class="n">html_theme</span> <span class="o">=</span> <span class="s2">&quot;sphinx_rtd_theme&quot;</span>
+
+<span class="n">html_theme_path</span> <span class="o">=</span> <span class="p">[</span><span class="n">sphinx_rtd_theme</span><span class="o">.</span><span class="n">get_html_theme_path</span><span class="p">()]</span>
+
+<span class="n">html_style</span> <span class="o">=</span> <span class="s2">&quot;css/my_theme.css&quot;</span>
+
+<span class="n">html_static_path</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;_static&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<ol class="simple">
+<li><p>theme をちょっとカスタマイズ
+<code class="docutils literal notranslate"><span class="pre">_static/css/my_theme.css</span></code>を作成。場所を間違えるとcss全部適用されない。</p></li>
+</ol>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="p">@</span><span class="k">import</span> <span class="nt">url</span><span class="o">(</span><span class="s2">&quot;theme.css&quot;</span><span class="o">)</span><span class="p">;</span>
+ 
+<span class="p">.</span><span class="nc">wy-nav-content</span> <span class="p">{</span>
+    <span class="k">max-width</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">h1</span><span class="o">,</span><span class="nt">h2</span><span class="o">,</span><span class="nt">h3</span><span class="o">,</span><span class="nt">h4</span><span class="o">,</span><span class="nt">h5</span><span class="o">,</span><span class="nt">h6</span> <span class="p">{</span>
+    <span class="k">border-bottom</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="kc">solid</span> <span class="mh">#ccc</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">wy-table-responsive</span> <span class="nt">table</span> <span class="nt">td</span><span class="o">,</span> <span class="p">.</span><span class="nc">wy-table-responsive</span> <span class="nt">table</span> <span class="nt">th</span> <span class="p">{</span>
+    <span class="k">white-space</span><span class="p">:</span> <span class="kc">normal</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">colgroup</span> <span class="p">{</span>
+    <span class="k">display</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>ありがたいページ<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p><a class="reference external" href="https://qiita.com/pashango2/items/d1b379b699af85b529ce">https://qiita.com/pashango2/items/d1b379b699af85b529ce</a><br /><a class="reference external" href="http://kuttsun.blogspot.com/2016/11/sphinx-sphinxrtdtheme.html">http://kuttsun.blogspot.com/2016/11/sphinx-sphinxrtdtheme.html</a></p>
+</div>
+<div class="section" id="memo">
+<h2>memo<a class="headerlink" href="#memo" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>調べていて気になったものを書き留めておく場所</p>
+<ul class="simple">
+<li><p>sphinxcontrib-blockdiag<br />sphinxでブロック図、シーケンス図がかけるとのこと</p></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="sublime_text_3_初期設定.html" class="btn btn-neutral float-right" title="sublime text 3 初期設定" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="sphinx_on_centos6.html" class="btn btn-neutral float-left" title="sphinx on centos6" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, shka
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
