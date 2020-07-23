@@ -5,7 +5,7 @@
 おソースを取ってきてmakeしてインストールする。
 'python'のシンボリックリンクを更新して完了。
 
-``` python
+```sh
 # インストール
 sudo wget  https://www.python.org/ftp/python/3.6.2/Python-3.6.2.tar.xz
 xz -dc Python-3.6.2.tar.xz | tar xfv -

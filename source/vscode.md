@@ -1,7 +1,7 @@
 vscode関係
 ===
 
-sublime text 3環境に近づけるために導入したextentions
+sublime text 3 環境に近づけるために導入したextentions
 ---
 
 - Monokai Extended

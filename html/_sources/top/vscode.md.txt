@@ -1,14 +1,48 @@
 vscode関係
 ===
 
-- sublime text 3で使っている環境に近づけるために導入したextentions
+sublime text 3 環境に近づけるために導入したextentions
+---
 
-    - Monokai Extended
-    - Sublime Text Keymap and Settings
-    - Python-autopep8  
-        別途autopep8のインストールが必要
+- Monokai Extended
 
-    - Shift+Enter でダブルスペース改行
-    - Python  
-        lintingとかやってくれるそうなので
+- Sublime Text Keymap and Settings
+
+- Python-autopep8  
+    別途autopep8のインストールが必要
+
+- Shift+Enter でダブルスペース改行  
+    テキスト編集時のDefault は Find Previous になっている。これは削除。  
+    さらに下記を追加する。
+
+    ```json
+    {
+        "key": "shift+enter",
+        "command": "type",
+        "args": {
+            "text": "  \n"
+        },
+        "when": "editorTextFocus"
+    }
+    ```
+
+- Python  
+    lintingとかやってくれるそうなので
+
+
+
+snippet 関連
+---
+- snippet を優先して表示  
+settings.jsonに追加 
+`"editor.snippetSuggestions": "top"`
+
+- snippet のタブストップ中に入力補完できるようにする  
+settings.jsonに追加 
+`"editor.suggest.snippetsPreventQuickSuggestions": false`
+
+- snippet が効かないとき  
+Global は出てくるけど scope 限定したスニペットはキーワード打っただけでは出てこない仕様っぽい。
+Ctrl+Space すると出てくる。
+
 

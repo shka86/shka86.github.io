@@ -174,25 +174,25 @@
 <hr class="docutils" />
 <p>おソースを取ってきてmakeしてインストールする。
 'python'のシンボリックリンクを更新して完了。</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span># インストール
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="c1"># インストール</span>
 sudo wget  https://www.python.org/ftp/python/3.6.2/Python-3.6.2.tar.xz
-xz -dc Python-3.6.2.tar.xz | tar xfv -
-cd Python-3.6.2
-./configure # defaultでは/usr/local/binに入る
+xz -dc Python-3.6.2.tar.xz <span class="p">|</span> tar xfv -
+<span class="nb">cd</span> Python-3.6.2
+./configure <span class="c1"># defaultでは/usr/local/binに入る</span>
 make
 sudo make install
 
-# 後日pipが入っていなくて困った。
-# 同じディレクトリで下のようにやる。
+<span class="c1"># 後日pipが入っていなくて困った。</span>
+<span class="c1"># 同じディレクトリで下のようにやる。</span>
 sudo apt-get install libssl-dev
 sudo make install
 
-※エラー 404 Not Foundで うまくいかなかったら
+※エラー <span class="m">404</span> Not Foundで うまくいかなかったら
 sudo apt-get updateしてね
 
-# おまけ
-python3 -m pip -V # pipが入っているか確認
-python3 -m pip freeze # 入っているパッケージの確認
+<span class="c1"># おまけ</span>
+python3 -m pip -V <span class="c1"># pipが入っているか確認</span>
+python3 -m pip freeze <span class="c1"># 入っているパッケージの確認</span>
 </pre></div>
 </div>
 </div>
