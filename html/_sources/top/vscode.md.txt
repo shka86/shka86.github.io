@@ -30,6 +30,15 @@ sublime text 3 環境に近づけるために導入したextentions
     lintingとかやってくれるそうなので
 
 
+- Insert Date String  
+    キーボードショートカットに "Insert Date" を "ctrl + ;" に設定する。  
+    zoom機能がdefaultで登録されているようですが、構わず削除
+
+
+- insertNums
+
+
+
 
 snippet 関連
 ---

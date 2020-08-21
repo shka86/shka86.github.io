@@ -9,6 +9,7 @@ top
    others/others.rst
    raspberry_pi/raspberry_pi.rst
    bashrcに加えた変更をまとめる記事.md
+   GUI開発.md
    python3.6.2のインストール.md
    pythonスクリプトメモ.md
    sphinx_on_centos6.md
