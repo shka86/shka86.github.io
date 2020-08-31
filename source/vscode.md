@@ -38,6 +38,10 @@ sublime text 3 環境に近づけるために導入したextentions
 - insertNums
 
 
+キーボードショートカット
+---
+- crtl+shift+w: word wrap に変更
+
 
 
 snippet 関連
